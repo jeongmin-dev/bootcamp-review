@@ -8,6 +8,10 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Jua&display=swap" rel="stylesheet">
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+          integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
+          crossorigin="anonymous">
     <title> 리뷰사이트 페이지1 </title>
     <script src="./page1.js" charset="utf-8"></script>
 
@@ -15,63 +19,78 @@
         * {
             font-family: 'Jua', sans-serif;
         }
-
-        .title {
-            font-size: 35px;
-            font-weight: bold;
-        }
-
-        .logo {
+        post_border{
 
         }
+
     </style>
 </head>
-<body>
+<body style="width:1200px;margin:auto;">
+<div id="header">
+    <h2 style="background-color: #8d62fa;color:black;font-size:50px;height:225px">
+        <img src="../static/Logo_ALL.png"
+             style="padding:0px 0px 0px 0px;">
+
+        <span style="float:right; padding-right:50px;">
+        <button style="margin-top:150px;width:90px;height:50px" type="button" class="btn btn-dark">로그인</button>
+        <button style="margin-top:150px;width:90px;height:50px" type="button" class="btn btn-dark">회원가입</button>
+    </span></h2>
+
+</div>
+
 <div>
-    <div>
-        <h1>
-            리뷰 공유 사이트
-        </h1>
-    </div>
-
-    <div>
-        <button type="button" onclick="location.href='http://www.naver.com' ">홈</button>
-        <button type="button" onclick="location.href='http://www.naver.com' ">로그인</button>
-    </div>
-
-    <div class="title">
-        <p>리뷰 검색</p>
-    </div>
-
-    <div class=logo>
-        <img src="../static/Logo_ALL.png" width=200 height=100>
-        <img src="../static/Logo_hanghae.png" width=200 height=100>
-        <img src="../static/Logo_codestates.png" width=200 height=100>
-        <img src="../static/Logo_fastcamp.png" width=200 height=100>
-        <img src="../static/Logo_seoul42.png" width=200 height=100>
-    </div>
-
-
-    <div class="title">
-        <p>리뷰.
-        <button type="button" onclick="location.href='http://www.naver.com' ">리뷰 쓰기</button>
+    <h2 style="background-color: #8d62fa; color:black ; font-size:50px;height:80px">
+        <p style="margin-top:10px;margin-left:500px">리뷰
+            <button style="width:120px;height:50px" type="button" class="btn btn-dark">리뷰 작성 하기</button>
         </p>
+    </h2>
+
+</div>
+
+<div id="section" style="text-align: center;">
+    <span style=" color:black; text-align:center"><img src="../static/Logo_ALL.png"
+                                                       style="border:5px solid black;border-radius:1em; margin-top:10px;width:150px;height:120px;margin-right:40px"></span>
+    <span style=" color:black; text-align:center"><img src="../static/Logo_hanghae.png"
+                                                       style="border:5px solid black;border-radius:1em; margin-top:10px;width:150px;height:120px;margin-right:40px"></span>
+    <span style=" color:black; text-align:center"><img src="../static/Logo_codestates.png"
+                                                       style="border:5px solid black;border-radius:1em; margin-top:10px;width:150px;height:120px;margin-right:40px"></span>
+    <span style="  color:black; text-align:center"><img src="../static/Logo_fastcamp.png"
+                                                       style="border:5px solid black;border-radius:1em; margin-top:10px;width:150px;height:120px;margin-right:40px"></span>
+    <span style=" color:black; text-align:center"><img src="../static/Logo_seoul42.png"
+                                                       style="border:5px solid black;border-radius:1em; margin-top:10px;width:150px;height:120px;margin-right:40px"></span>
+</div>
+ <div style="margin-top:30px;">
+
+        <div style="border:7px solid black;border-radius:1em; margin-top:10px;">
+            <img src="../static/alt_img.jpg" width=200 height=150>
+        <span style="font-weight: bolder;font-size:30px">
+                              title
+                summary, rating </span>
+        </div>
+     <div style="border:7px solid black;border-radius:1em; margin-top:10px;">
+            <img src="../static/alt_img.jpg" width=200 height=150>
+        <span style="font-weight: bolder;font-size:30px">
+                              title
+                summary, rating </span>
+        </div>
+     <div style="border:7px solid black;border-radius:1em; margin-top:10px;">
+            <img src="../static/alt_img.jpg" width=200 height=150>
+        <span style="font-weight: bolder;font-size:30px">
+                              title
+                summary, rating </span>
+        </div>
+     <div style="border:7px solid black;border-radius:1em; margin-top:10px;">
+            <img src="../static/alt_img.jpg" width=200 height=150>
+        <span style="font-weight: bolder;font-size:30px">
+                              title
+                summary, rating </span>
+        </div>
+    <p style="float:right;font-size:40px"> 더보기 .. </p>
     </div>
-    <div style="font-size: 20px">
-        <img src="../static/alt_img.jpg" width=160 height=80>
-        <p>title</p>
-        <p>summary, rating</p>
-        <img src="../static/alt_img.jpg" width=160 height=80>
-        <p>title</p>
-        <p>summary, rating</p>
-        <img src="../static/alt_img.jpg" width=160 height=80>
-        <p>title</p>
-        <p>summary, rating</p>
 
+<!-- 10개정도 보여주고 더보기 만들기 -->
 
-    </div>
-
-
+<div id="footer"><h2>Footer 영역 : Banner</h2>
 </div>
 </body>
 </html>
