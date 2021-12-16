@@ -1,0 +1,101 @@
+* {
+  font-family: "Cute Font", cursive;
+  font-family: "Gaegu", cursive;
+  font-family: "Gamja Flower", cursive;
+  font-family: "Jua", sans-serif;
+}
+header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  display: flex;
+  justify-content: space-between;
+  padding: 30px;
+  background-color: rgb(255, 198, 133);
+  z-index: 1;
+}
+.wrap {
+  width: 85vw;
+  margin: auto;
+}
+.logo span {
+  font-size: 30px;
+}
+.nav_btn {
+  display: flex;
+  align-items: center;
+}
+.nav_btn :first-child {
+  margin-right: 30px;
+}
+body {
+  margin-top: 130px;
+  height: 100vh;
+  width: 100vw;
+}
+ul {
+  list-style: none;
+  padding-left: 0;
+}
+nav ul {
+  display: flex;
+  justify-content: space-between;
+  flex-flow: wrap;
+}
+nav ul li img {
+  width: 60px;
+  height: 60px;
+  border: 2px solid black;
+  border-radius: 50%;
+  opacity: 0.5;
+}
+.my_review_img img {
+  width: 150px;
+  height: 150px;
+  border: 2px solid black;
+}
+.my_review {
+  display: flex;
+  align-content: center;
+  align-items: center;
+  margin-bottom: 5px;
+}
+.my_review_text {
+  width: 100%;
+  margin-left: 20px;
+}
+.banner {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: fixed;
+  bottom: 5%;
+  right: 4%;
+  width: 60px;
+  height: 60px;
+  border: 2px solid white;
+  border-radius: 50%;
+  color: white;
+  background-color: rgb(247, 209, 166);
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.6);
+  padding: 5px;
+}
+.on {
+  position: absolute;
+  bottom: 400px;
+}
+.footer_span {
+  margin-right: 10px;
+}
+.jumbotron {
+  height: 350px;
+  background-color: rgb(207, 158, 103);
+}
+.pagination {
+  width: fit-content;
+  margin: 20px auto;
+}
+footer {
+  position: relative;
+}
