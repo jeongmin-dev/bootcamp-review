@@ -61,7 +61,7 @@ nav ul li img {
 }
 
 /* 내가 쓴글 보여주는 곳, 나의 리뷰 리스트 */
-.my_review {
+/* .my_review {
   display: flex;
   align-content: center;
   align-items: center;
@@ -114,4 +114,23 @@ footer {
 }
 .footer_span {
   margin-right: 10px;
+}
+
+table {
+  width: 100%;
+  table-layout: fixed;
+}
+th {
+  text-align: center;
+  font-size: 20px;
+  padding: 30px 0px;
+}
+tr {
+  justify-content: space-between;
+  align-items: center;
+  text-align: center;
+}
+.logo_review_img {
+  border: 1px solid black;
+  border-radius: 50%;
 }
