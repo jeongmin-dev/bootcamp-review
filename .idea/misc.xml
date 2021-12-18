@@ -1,4 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
+<<<<<<< HEAD
   <component name="ProjectRootManager" version="2" project-jdk-name="Python 3.8 (bootcamp-review)" project-jdk-type="Python SDK" />
+=======
+  <component name="ProjectRootManager" version="2" project-jdk-name="Uninitialized environment" project-jdk-type="Python SDK" />
+>>>>>>> f51bb41be3600d6e4c461df62b1953b3f445f2e6
 </project>
