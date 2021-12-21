@@ -55,6 +55,7 @@ footer {
   background-color: black;
   padding: 50px;
   color: #999;
+  margin-bottom: 0;
 }
 .footer_span {
   margin-right: 10px;

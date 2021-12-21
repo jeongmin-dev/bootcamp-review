@@ -20,7 +20,16 @@ def review_login():
 
 @app.route('/register')
 def review_register():
+    # sample_receive = request.form['sample_give']
+    # print(sample_receive)
     return render_template('register.html')
+
+
+@app.route('/test', methods=['POST'])
+def test_post():
+    title_receive = request.form['title_give']
+    print(title_receive)
+    return jsonify({'result': 'success', 'msg': '이 요청은 POST!'})
 
 
 @app.route('/review')

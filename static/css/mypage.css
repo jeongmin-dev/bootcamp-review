@@ -72,3 +72,10 @@ nav ul li img {
   position: absolute;
   bottom: 400px;
 }
+
+.mypage_banner_btn {
+  color: white;
+}
+.mypage_banner_btn:hover {
+  color: black;
+}
