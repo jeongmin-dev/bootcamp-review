@@ -1,44 +1,31 @@
-from flask import Flask, render_template, jsonify, request, session
-
+from flask import Flask, render_template, jsonify, request
 app = Flask(__name__)
+
+import requests
+from bs4 import BeautifulSoup
 
 from pymongo import MongoClient
 client = MongoClient('localhost', 27017)
 db = client.review_db
 
-# client = MongoClient('mongodb://test:test@localhost', 27017)
-# db = client.review_db
-
-
-@app.route('/')
-def review_main():
-    return render_template('index.html')
-
+## HTML을 주는 부분
+@app.route('/register')
+def review_register():
+   return render_template('register.html')
 
 @app.route('/login')
 def review_login():
-    return render_template('login.html')
+   return render_template('login.html')
 
+@app.route('/users', methods=['GET'])
+def listing():
+    sample_receive = request.args.get('sample_give')
+    print(sample_receive)
+    return jsonify({'msg':'GET 연결되었습니다!'})
 
-@app.route('/register')
-def review_register():
-    # sample_receive = request.form['sample_give']
-    # print(sample_receive)
-    return render_template('register.html')
-
-
-@app.route('/review')
-def review_write():
-    return render_template('review.html')
-
-
-@app.route('/mypage')
-def review_mypage():
-    return render_template('mypage.html')
-
-
-@app.route('/registered', methods=['POST'])
-def register_post():
+## API 역할을 하는 부분
+@app.route('/users', methods=['POST'])
+def register_user():
     email_receive = request.form['email_give']
     password_receive = request.form['password_give']
 
@@ -47,13 +34,8 @@ def register_post():
         'password': password_receive
     }
     db.users.insert_one(register_doc)
-    return jsonify({'result': 'success', 'msg': '회원가입이 완료되었습니다.'})
 
-
-@app.route('/users', methods=['GET'])
-def read_users():
-    users = list(db.users.find({}, {'_id': False}))
-    return jsonify({'all_users': users})
+    return jsonify({'msg':'회원가입이 완료되었습니다.'})
 
 if __name__ == '__main__':
-    app.run('0.0.0.0', port=5000, debug=True)
+   app.run('0.0.0.0',port=5000,debug=True)
