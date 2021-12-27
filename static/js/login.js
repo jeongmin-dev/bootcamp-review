@@ -3,9 +3,16 @@ $(document).ready(function () {
 });
 
 function confirmedMsg() {
-    let inputPassword = $('#register_password').val();
-    let confirmedPassword = $('#confirm_password').val();
-    console.log(inputPassword, confirmedPassword)
+    $('#confirm_password').focusout(function() {
+        let inputPassword = $('#register_password').val();
+        let confirmedPassword = $('#confirm_password').val();
+        if(inputPassword != confirmedPassword){
+            $('#confirm_message').text('비밀번호가 일치하지 않습니다.').css('color', '#dc3545')
+        } else {
+            $('#confirm_message').text('비밀번호가 일치합니다.').css('color', '#28a745')
+        }
+
+    });
 }
 
 function toRegister() {
