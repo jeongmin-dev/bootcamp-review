@@ -14,12 +14,12 @@ ul {
 }
 
 /* 나의 관심 부트캠프 로고들 정렬 및 디자인 */
-nav ul {
+.mypage_fav ul {
   display: flex;
   justify-content: space-between;
   flex-flow: wrap;
 }
-nav ul li img {
+.mypage_fav ul li img {
   width: 60px;
   height: 60px;
   border: 2px solid black;
@@ -28,26 +28,20 @@ nav ul li img {
 }
 
 /* 내가 쓴글 보여주는 곳, 나의 리뷰 리스트 */
-.my_review {
+.mypage_review {
   display: flex;
   align-content: center;
   align-items: center;
   margin-bottom: 5px;
 }
-.my_review_img img {
+.mypage_review_img img {
   width: 150px;
   height: 150px;
   border: 2px solid black;
 }
-.my_review_text {
+.mypage_review_text {
   width: 100%;
   margin-left: 20px;
-}
-
-/* 페이지 버튼 중앙정렬 */
-.pagination {
-  width: fit-content;
-  margin: 20px auto;
 }
 
 /* 플러스 모양 눌러서 새 글쓰기 부분 */
@@ -78,4 +72,7 @@ nav ul li img {
 }
 .mypage_banner_btn:hover {
   color: black;
+}
+.no_review_hidden {
+  display: none;
 }

@@ -25,13 +25,6 @@ def review_register():
     return render_template('register.html')
 
 
-@app.route('/test', methods=['POST'])
-def test_post():
-    title_receive = request.form['title_give']
-    print(title_receive)
-    return jsonify({'result': 'success', 'msg': '이 요청은 POST!'})
-
-
 @app.route('/review')
 def review_write():
     return render_template('review.html')
@@ -40,6 +33,14 @@ def review_write():
 @app.route('/mypage')
 def review_mypage():
     return render_template('mypage.html')
+
+
+@app.route('/mypage/list', methods=['POST'])
+def select_id():
+    id_receive = request.form['id_give']
+    target_id = list(db1.test.find({'id': id_receive}, {'_id': False}))
+
+    return jsonify({'target_id': target_id})
 
 
 if __name__ == '__main__':
